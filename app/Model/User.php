@@ -53,17 +53,12 @@ class User extends Model implements Authenticatable
     public static function retrieveById($key) : ?Authenticatable
     {
         $user = User::query()->select(["user_id","role_id","nickname","username","mobile","avatar","approved","deleted_at"])
-            ->where("userId", $key)
-            ->first();
+                             ->where("userId", $key)
+                             ->first();
         if ($user instanceof Authenticatable) {
             return $user;
         }
         return null;
-    }
-
-    public function role()
-    {
-        return $this->belongsTo(Verify::class);
     }
 
     public function isAdmin()
