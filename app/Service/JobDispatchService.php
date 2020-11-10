@@ -6,7 +6,7 @@ use Hyperf\AsyncQueue\Driver\DriverFactory;
 use Hyperf\AsyncQueue\Driver\DriverInterface;
 use App\Job\DemoJob;
 
-class JobDispatchService extends BaseService
+class JobDispatchService
 {
     /**
      * @var DriverInterface
