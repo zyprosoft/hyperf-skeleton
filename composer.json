@@ -9,15 +9,6 @@
             "email": "1003081775@qq.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "git",
-            "url": ""
-        }
-    ],
-    "config": {
-        "secure-http": false
-    },
     "require": {
         "php": ">=7.2",
         "ext-swoole": ">=4.5",
