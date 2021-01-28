@@ -4,6 +4,7 @@ declare(strict_types=1);
 return [
     'cgw' => [
         'force_auth' => env('FORCE_AUTH', false),//强制校验签名,开启后CGW协议必须带签名参数访问
+        'sign_ttl' => 10,
         'config_list' => [
             "test" => "abcdefg",
         ]
@@ -21,5 +22,8 @@ return [
             'http://localhost',
             'http://lulinggushi.com'
         ],
+    ],
+    'clear_log' => [
+        'days' => 3, // 只保留三天的日志，三天以前的自动清除,设置成-1表示不执行清除任务
     ],
 ];
