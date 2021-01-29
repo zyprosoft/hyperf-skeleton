@@ -27,4 +27,14 @@ return [
     'clear_log' => [
         'days' => 3, // 只保留三天的日志，三天以前的自动清除,设置成-1表示不执行清除任务
     ],
+    'mail' => [
+        'smtp' => [
+            'host' => 'smtp.qq.com',
+            'auth' => true,
+            'username' => '',//qq邮箱账号,eg. 1003081775@qq.com
+            'password' => '',//qq邮箱申请的授权密码
+            'port' => '465', //qq邮箱经测试是465端口+ssl协议有效果
+            'secure' => 'ssl'
+        ]
+    ],
 ];
