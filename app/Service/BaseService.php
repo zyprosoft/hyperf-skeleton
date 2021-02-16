@@ -1,21 +1,20 @@
 <?php
+/**
+ * This file is part of ZYProSoft/Hyperf-Skeleton.
+ *
+ * @link     http://zyprosoft.lulinggushi.com
+ * @document http://zyprosoft.lulinggushi.com
+ * @contact  1003081775@qq.com
+ * @Company  泽湾普罗信息技术有限公司(ZYProSoft)
+ * @license  GPL
+ */
 declare (strict_types=1);
 
 
 namespace App\Service;
-use Psr\Container\ContainerInterface;
 use ZYProSoft\Service\AbstractService;
 
 class BaseService extends AbstractService
 {
-    /**
-     * @var \App\Service\JobDispatchService
-     */
-    protected $jobDispatcher;
 
-    public function __construct(ContainerInterface $container)
-    {
-        parent::__construct($container);
-        $this->jobDispatcher = $this->container->get(JobDispatchService::class);
-    }
 }

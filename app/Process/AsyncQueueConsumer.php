@@ -1,14 +1,14 @@
 <?php
-
-declare(strict_types=1);
 /**
- * This file is part of Hyperf.
+ * This file is part of ZYProSoft/Hyperf-Skeleton.
  *
- * @link     https://www.hyperf.io
- * @document https://hyperf.wiki
- * @contact  group@hyperf.io
- * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
+ * @link     http://zyprosoft.lulinggushi.com
+ * @document http://zyprosoft.lulinggushi.com
+ * @contact  1003081775@qq.com
+ * @Company  泽湾普罗信息技术有限公司(ZYProSoft)
+ * @license  GPL
  */
+declare(strict_types=1);
 namespace App\Process;
 
 use Hyperf\AsyncQueue\Process\ConsumerProcess;
