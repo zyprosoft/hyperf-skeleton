@@ -10,7 +10,6 @@
  */
 declare(strict_types=1);
 use Hyperf\Utils\Str;
-use ZYProSoft\Log\Log;
 
 //设置加密密钥对
 $zgwSecretList = env('ZGW_SECRET_LIST');//密钥对列表 test&abcdefg;test1&abcdefg
@@ -22,11 +21,7 @@ if (isset($zgwSecretList)) {
             $itemArray = explode('&', $item);
             if (count($itemArray) == 2) {
                 $appSecretList[$itemArray[0]] = $itemArray[1];
-            }else{
-                Log::error('zgw secret item invalidate & explode count over 2!');
             }
-        }else{
-            Log::error('zgw secret item invalidate & not found!');
         }
     }, $zgwSecretList);
 }
