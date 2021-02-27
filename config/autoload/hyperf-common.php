@@ -57,6 +57,7 @@ return [
         'allow_cross_origins' => $appCorsDomainList, //跨域白名单 eg. http://localhost:8081
     ],
     'rate_limit' => [
+        'enable' => env('RATE_LIMIT_ENABLE', false),//是否开启请求频率限制
         'access_rate_limit' => env('RATE_LIMIT_COUNT', 10), //频率限制次数
         'access_rate_ttl' => env('RATE_LIMIT_TTL', 20), //频率限制秒，两者组合为每20秒内最多允许10次请求单一接口
         'white_list' => $appRateLimitWhiteList, //频率限制白名单接口 eg. /weixin;/admin*
