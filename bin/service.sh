@@ -20,6 +20,7 @@ function start()
 {
 		 php -f hyperf.php start &
 		 echo 'start done'
+		 exit
 }
 
 function stop()
@@ -44,6 +45,7 @@ function stop()
         	fi
         done
         echo 'stop success'
+        exit
 }
 
 case $type in
